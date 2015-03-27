@@ -1,6 +1,4 @@
 <?php
-  !function_exists('profiler_v2') ? require_once('libraries/profiler/profiler.inc') : FALSE;
-  profiler_v2('imager_profile');
 /**
  * Implements hook_install().
  *
@@ -286,7 +284,7 @@ function imager_profile_install() {
   menu_rebuild();
   // revert features to ensure they are all installed
   $features = array(
-    'imager_dist'
+    'imager_features'
   );
   features_revert($features);
   // ignore any rebuild messages
